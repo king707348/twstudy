@@ -1,0 +1,122 @@
+.container {
+    margin: 0 auto;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    .left-header {
+        width: 50%;
+        height: 80px;
+        display: flex;
+        h1 {
+            display: flex;
+            width: 55%;
+            padding: 3% 0% 0 2%;
+            border-right: 1px solid rgb(151, 151, 151);
+        }
+        a {
+            text-decoration: none;
+        }
+        img {
+            width: 480px;
+        }
+        .contact {
+            margin-top: 10px;
+            padding-left: 1.5%;
+            a:first-child {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                letter-spacing: 27px;
+                font-size: 21px;
+                padding-top: 10px;
+                color: black;
+            }
+            a:last-child {
+                display: inline-block;
+                padding-top: 10px;
+                padding-left: 6px;
+                color: black;
+                font-size: 21px;
+                letter-spacing: 13.5px;
+            }
+            img {
+                padding-right: 15px;
+                width: 30px;
+            }
+        }
+    }
+    .right-header {
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+        .header-search {
+            width: 40%;
+            padding-top: 15px;
+            margin-left: 10%;
+            span {
+                display: inline-block;
+                letter-spacing: 5px;
+            }
+            label {
+                display: block;
+            }
+            input {
+                margin-top: 15px;
+                text-indent: 40px;
+                width: 100%;
+                height: 40px;
+                border-radius: 20px;
+                border: none;
+                background-color: rgb(221, 221, 221);
+                outline: none;
+            }
+            input::placeholder {
+                letter-spacing: 3px;
+                color: #a7a7a7;
+            }
+            .find {
+                position: relative;
+            }
+            .find::before {
+                font-family: "Font Awesome 5 Free"; 
+                font-weight: 900; 
+                content: "\f002";
+                font-size: 16px;
+                position: absolute;
+                color: #068FDF;
+                left: 3%;
+                top: 50%;
+                transform: translateY(0%);
+            }
+        }
+        .icon {
+            margin: 25px 0 0 0px;  
+            ul {
+                display: flex;
+            }
+            li {
+                margin: 0 20px;
+            }
+            img {
+                width: 70px;
+                display: block;
+            }
+        }
+        .menu {
+            ul {
+                display: flex;
+                justify-content: end;
+            }
+            img {
+                width: 105px;
+                display: block;
+            }
+        }
+    }
+}
+.my-swiper {
+    img {
+        display: block;
+    }
+}

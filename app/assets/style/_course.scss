@@ -1,0 +1,29 @@
+.course {
+    text-align: center;
+    margin: 150px 0;
+    img {
+        display: block;
+        width: 100px;
+        margin: 0 auto;
+    }
+    ul {
+        display: flex;
+        padding: 70px 0;
+        border-bottom: 1px solid rgb(194, 194, 194);
+        li {
+            width: 25%;
+        }
+        h3 {
+            text-align: left;
+            border-left: #068FDF 3px solid;
+            margin-left: 10px;
+            margin-bottom: 15px;
+            padding-left: 10px;
+            font-size: 24px;
+            letter-spacing: 2px;
+        }
+        img {
+            width: 100%;
+        }
+    }
+}

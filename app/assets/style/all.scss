@@ -1,0 +1,38 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css);
+@import url(https://unpkg.com/swiper/swiper-bundle.min.css);
+
+body {
+  font-family: '微軟正黑體';
+}
+.d-block {
+  display: block
+}
+
+.line {
+  width: 550px !important;
+}
+
+.border-none {
+  border: none !important;
+}
+
+.sub-title {
+  padding: 35px 0;
+  font-size: 48px;
+  font-weight: bold;
+  letter-spacing: 10px;
+}
+
+.sub-text {
+  padding-top: 15px;
+  color: #068FDF;
+  font-size: 21px;
+  line-height: 1.5;
+  letter-spacing: 3.5px;
+}
+
+@import './header';
+@import './serach';
+@import './course';
+@import './leaderBoard';

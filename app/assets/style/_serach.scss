@@ -1,0 +1,105 @@
+.search {
+    background-image: url('../images/2_Search/1_search/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 30px;
+    .search-box {
+        width: 800px;
+        margin: 0 auto;
+    }
+    h2 {
+        display: block;
+        text-align: center;
+        font-size: 48px;
+        letter-spacing: 10px;
+        color: white;
+    }
+    img {
+        display: block;
+        padding: 40px 0 50px 0;
+        margin: 0 auto;
+        width: 75px;
+    }
+    .select-out-box {
+        align-items: center;
+        justify-content: space-between;
+        display: flex;
+        background-color: white;
+        a {
+            color: white;
+            font-size: 21px;
+            letter-spacing: 5px;
+            background-color: rgb(97, 97, 8);
+            padding: 10px 15px;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+        .select-box {
+            display: flex;
+            padding: 15px;
+            i {
+                color: rgb(194, 194, 194);
+            }
+            li {
+                display: flex;
+                align-items: center;
+                margin: 0 15px;
+                &:first-child {
+                    margin-right: 30px;
+                }
+            }
+            h3 {
+                color: #068FDF;
+                font-size: 21px;
+                margin-right: 15px;
+                letter-spacing: 3px;
+            }
+            label {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: relative;
+            }
+            label:before {
+                font-family: "Font Awesome 5 Free"; 
+                font-weight: 900; 
+                content: "\f002";
+                color: rgb(194, 194, 194);
+                font-size: 21px;
+                padding-right: 15px;
+              }
+            input {
+                border: none;
+                font-size: 21px;
+                &:focus {
+                    outline: none;
+                }
+                &::placeholder {
+                    letter-spacing: 3px;
+                }
+            }
+        }
+    }
+    .history-out-box {
+        .history-list {
+            display: flex;
+            padding-top: 20px;
+            &:last-child {
+                padding-top: 10px;
+            }
+            h3 {
+                color: white;
+                font-size: 18px;
+                padding-right: 10px;
+            }
+            li {
+                padding: 0 5px;
+                letter-spacing: 2px;
+                color: white;
+            }
+        }
+        ul {
+            display: flex;
+        }
+    }
+}
