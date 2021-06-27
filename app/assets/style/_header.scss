@@ -10,8 +10,8 @@
         display: flex;
         h1 {
             display: flex;
-            width: 55%;
-            padding: 3% 0% 0 2%;
+            margin: 3% 0 0 2%;
+            padding-right: 2%;
             border-right: 1px solid rgb(151, 151, 151);
         }
         a {
@@ -27,18 +27,20 @@
                 display: flex;
                 align-items: center;
                 text-decoration: none;
-                letter-spacing: 27px;
-                font-size: 21px;
+                letter-spacing: 20px;
+                font-size: 18px;
                 padding-top: 10px;
                 color: black;
+                font-weight: bold;
             }
             a:last-child {
                 display: inline-block;
                 padding-top: 10px;
                 padding-left: 6px;
                 color: black;
-                font-size: 21px;
-                letter-spacing: 13.5px;
+                font-size: 16px;
+                letter-spacing: 12.5px;
+                font-weight: bold;
             }
             img {
                 padding-right: 15px;
@@ -99,7 +101,7 @@
                 margin: 0 20px;
             }
             img {
-                width: 70px;
+                width: 60px;
                 display: block;
             }
         }
@@ -115,8 +117,9 @@
         }
     }
 }
-.my-swiper {
+.mySwiper {
     img {
+        width: 100%;
         display: block;
     }
 }

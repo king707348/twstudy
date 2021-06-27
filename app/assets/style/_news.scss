@@ -1,0 +1,75 @@
+.news {
+    margin: 150px 0;
+    text-align: center;
+    img {
+        width: 80px;
+        display: block;
+        margin: 0 auto;
+    }
+    &-box {
+        background-color: #068FDF;
+        margin-top: 30px;
+        padding: 2% 4%;
+        &-inner {
+            display: flex;
+            justify-content: space-around;
+            background-color: rgb(229, 244, 247);
+            padding: 3% 5%;
+            img {
+                border: 5px solid #068FDF;
+                width: 99%;
+                object-fit: cover;
+                margin: 0;
+            }
+            .left-list {
+                width: 40%;
+                .classification {
+                    @include classification
+                }
+                h3 {
+                    padding-top: 20px;
+                    text-align: left;
+                    font-size: 36px;
+                    font-weight: 900;
+                    color: #068FDF;
+                }
+                p {
+                    padding-top: 30px;
+                    text-align: left;
+                    color: #c8c8c8;
+                }
+            }
+            .right-list {
+                width: 40%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .pic {
+                    width: 60%;
+                    display: block;
+                    margin-right: 30px;
+                }
+                &-inner {
+                    display: flex;
+                    justify-content: space-between;
+                    .classification {
+                        @include classification;
+                        margin-top: 0;
+                    }
+                    h3 {
+                        padding-top: 20px;
+                        text-align: left;
+                        font-size: 36px;
+                        font-weight: 900;
+                        color: #068FDF;
+                    }
+                    p {
+                        padding-top: 30px;
+                        text-align: left;
+                        color: #c8c8c8;
+                    }
+                }
+            }
+        }
+    }
+}

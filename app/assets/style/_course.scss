@@ -3,7 +3,7 @@
     margin: 150px 0;
     img {
         display: block;
-        width: 100px;
+        width: 80px;
         margin: 0 auto;
     }
     ul {
@@ -25,5 +25,8 @@
         img {
             width: 100%;
         }
+    }
+    ul:last-child {
+        padding-bottom: 0;
     }
 }
