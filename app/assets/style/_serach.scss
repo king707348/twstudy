@@ -2,6 +2,8 @@
     background-image: url('../images/2_Search/1_search/background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    margin-top: 60px;
+    padding-top: 60px;
     padding-bottom: 30px;
     .search-box {
         width: 800px;
@@ -10,13 +12,13 @@
     h2 {
         display: block;
         text-align: center;
-        font-size: 48px;
+        font-size: 36px;
         letter-spacing: 10px;
         color: white;
     }
     img {
         display: block;
-        padding: 40px 0 50px 0;
+        padding: 6px 0;
         margin: 0 auto;
         width: 75px;
     }
@@ -25,6 +27,7 @@
         justify-content: space-between;
         display: flex;
         background-color: white;
+        margin-top: 60px;
         a {
             color: white;
             font-size: 21px;

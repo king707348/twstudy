@@ -1,4 +1,6 @@
-var swiper = new Swiper(".mySwiper", {});
+var swiper = new Swiper(".mySwiper", {
+    
+});
 var swiper_left = new Swiper(".mySwiper-left", {
     spaceBetween: 20,
     slidesPerView: "auto",
@@ -21,3 +23,20 @@ var swiper_right = new Swiper(".mySwiper-video", {
         el: ".swiper-pagination",
     },
 });
+
+new WOW().init();
+
+$('.dropdown-toggle').click(function(e){
+    e.preventDefault();
+    $('.header .fixed-right .icon').slideToggle()
+})
+
+$('.fixed-black-box').hover(function(){
+    $('.fixed-black-box').hide();
+    $('.fixed-black .menu').show();
+})
+
+$('.fixed-black .menu').mouseleave(function(){
+    $('.fixed-black-box').show();
+    $('.fixed-black .menu').hide();
+})

@@ -1,5 +1,5 @@
 .news {
-    margin: 150px 0;
+    margin: 150px 0 50px 0px;
     text-align: center;
     img {
         width: 80px;
@@ -17,7 +17,7 @@
             padding: 3% 5%;
             img {
                 border: 5px solid #068FDF;
-                width: 99%;
+                width: 100%;
                 object-fit: cover;
                 margin: 0;
             }
@@ -27,9 +27,9 @@
                     @include classification
                 }
                 h3 {
-                    padding-top: 20px;
+                    padding-top: 10px;
                     text-align: left;
-                    font-size: 36px;
+                    font-size: 28px;
                     font-weight: 900;
                     color: #068FDF;
                 }
@@ -52,14 +52,18 @@
                 &-inner {
                     display: flex;
                     justify-content: space-between;
+                    margin-bottom: 50px;
                     .classification {
                         @include classification;
                         margin-top: 0;
                     }
+                    .content {
+                        width: 60%;
+                    }
                     h3 {
                         padding-top: 20px;
                         text-align: left;
-                        font-size: 36px;
+                        font-size: 28px;
                         font-weight: 900;
                         color: #068FDF;
                     }
@@ -72,4 +76,8 @@
             }
         }
     }
+}
+.news-button {
+    text-align: center;
+    margin-bottom: 160px;
 }

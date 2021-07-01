@@ -1,6 +1,7 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css);
 @import url(https://unpkg.com/swiper/swiper-bundle.min.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css);
 
 @import './layout';
 @import './header';
@@ -10,3 +11,5 @@
 @import './news';
 @import './video';
 @import './hero';
+@import './vendor';
+@import './footer';

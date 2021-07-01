@@ -4,6 +4,11 @@
 .header {
     display: flex;
     justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: white;
     .left-header {
         width: 50%;
         height: 80px;
@@ -18,12 +23,12 @@
             text-decoration: none;
         }
         img {
-            width: 480px;
+            width: 500px;
         }
         .contact {
             margin-top: 10px;
             padding-left: 1.5%;
-            a:first-child {
+            &-inner:first-child {
                 display: flex;
                 align-items: center;
                 text-decoration: none;
@@ -41,6 +46,9 @@
                 font-size: 16px;
                 letter-spacing: 12.5px;
                 font-weight: bold;
+            }
+            a:hover {
+                opacity: .7;
             }
             img {
                 padding-right: 15px;
@@ -88,7 +96,7 @@
                 position: absolute;
                 color: #068FDF;
                 left: 3%;
-                top: 50%;
+                top: 40%;
                 transform: translateY(0%);
             }
         }
@@ -116,10 +124,64 @@
             }
         }
     }
+    .fixed-right {
+        position: fixed;
+        right: 2%;
+        top: 12%;
+        z-index: 2;
+        img {
+            width: 50px;
+            display: block;
+        }
+        &-menu {
+            position: relative;
+        }
+        .dropdown-toggle {
+            margin-top: 280px;
+        }
+        .icon {
+            display: none;
+            bottom: 10%;
+            position: absolute;
+            li {
+                margin-top: 15px;
+            }
+        }
+    }
+    .fixed-black {
+        &-box {
+            width: 20px;
+            height: 370px;
+            z-index: 2;
+            background-color: black;
+            position: fixed;
+            right: 0;
+            top: 13%;
+        }
+        .menu {
+            display: none;
+        }
+        ul {
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            right: 0;
+            top: 12.5%;
+            li {
+                img {
+                    width: 105px;
+                    display: block;
+                }
+            }
+        }
+    }
 }
 .mySwiper {
+    margin-top: 120px;
     img {
         width: 100%;
+        height: 500px;
         display: block;
     }
 }

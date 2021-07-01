@@ -1,6 +1,8 @@
 body {
     font-family: '微軟正黑體';
+    line-height: 1.5;
   }
+
   .d-block {
     display: block
   }
@@ -14,12 +16,12 @@ body {
   }
   
   .sub-title {
-    padding: 35px 0;
-    font-size: 48px;
+    padding: 6px 0;
+    font-size: 36px;
     font-weight: 900;
     letter-spacing: 10px;
   }
-  
+
   .sub-text {
     padding-top: 15px;
     color: #068FDF;
@@ -27,6 +29,11 @@ body {
     line-height: 1.5;
     font-weight: 900;
     letter-spacing: 3.5px;
+  }
+
+  .modal-bg {
+    background-color: rgba(0,0,0,0.8) !important;
+    z-index: 99999;
   }
   
   @mixin classification {
@@ -45,4 +52,37 @@ body {
     small {
         letter-spacing: 5px;
     }
+  }
+
+  @mixin button {
+    display: block;
+    text-decoration: none;
+    margin: 40px auto 40px auto;
+    padding: 15px 0;
+    width: 250px;
+    font-size: 21px;
+    border-radius: 50px;
+    background-color: #081f2c;
+    color: white;
+    transition: background-color 0.5s;
+    &::after {
+        font-family: "Font Awesome 5 Free"; 
+        font-weight: 900; 
+        content: "\f054";
+        font-size: 18px;
+        margin-left: 15px;
+        padding: 4px;
+        color: #068FDF;
+        transition: color 0.5s;
+    }
+    &:hover {
+        background-color: #068FDF;
+    }
+    &:hover::after {
+        color: white;
+    }
+  }
+
+  .button {
+    @include button
   }

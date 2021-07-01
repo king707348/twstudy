@@ -19,7 +19,6 @@
                 border-right: 1px solid #c8c8c8;
                 background-color: white;
                 margin-top: 35px;
-                padding-bottom: 25px;
                 h2 {
                     display: inline-block;
                     font-size: 28px;
@@ -32,6 +31,7 @@
             }
             .icon {
                 width: 60px;
+                height: 60px;
             }
         }
         .right-list {
@@ -41,7 +41,6 @@
                 border-left: none;
                 background-color: white;
                 margin-top: 35px;
-                padding-bottom: 25px;
                 h2 {
                     display: inline-block;
                     font-size: 28px;
@@ -54,6 +53,7 @@
             }
             .icon {
                 width: 60px;
+                height: 60px;
             }
         }
         .inner-left {
@@ -78,7 +78,6 @@
             p {
                 padding-top: 15px;
                 text-align: left;
-                line-height: 1.5;
                 letter-spacing: 3px;
             }
             a {
@@ -95,9 +94,8 @@
                     font-size: 12px;
                     margin-left: 15px;
                     padding: 5px;
-                    color: white;
+                    color: gray;
                     border-radius: 50%;
-                    background-color: gray;
                 }
             }
         }
@@ -106,28 +104,6 @@
             margin: 0 50px;
             padding: 70px 0px 40px 0px;
             border-bottom: 1px solid #c8c8c8;
-        }
-        .button {
-            display: block;
-            text-decoration: none;
-            margin: 25px auto 0px auto;
-            padding: 15px 0;
-            width: 250px;
-            font-size: 21px;
-            border-radius: 25px;
-            background-color: #068FDF;
-            color: white;
-            &::after {
-                font-family: "Font Awesome 5 Free"; 
-                font-weight: 900; 
-                content: "\f054";
-                font-size: 18px;
-                margin-left: 15px;
-                padding: 4px;
-                color: #068FDF;
-                border-radius: 50%;
-                background-color: rgb(255, 255, 255);
-            }
         }
     }
 }
