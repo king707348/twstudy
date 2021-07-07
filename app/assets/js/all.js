@@ -46,18 +46,51 @@ $('.fixed-black .menu').mouseleave(function(){
 $('.fixed-black .menu').hide();
 
 // 分頁功能
-// Show the first tab and hide the rest
-$('.tabs-nav li:first-child').addClass('active');
+// 注意 .active 與 .active-bottom 為了覆蓋樣式有加上 !importnat
+// 這裡是預設載入所有樣式
+$('.tabs-nav li:first-child').find('a').addClass('active');
 $('.tab-content').hide();
 $('.tab-content:first').show();
+$('.course-class').children().hide();
+$('.course-class').children('.first').show();
+$('.tabs-nav li:first-child').addClass('active-bottom');
 
 // Click function
-$('.tabs-nav li').click(function(){
-  $('.tabs-nav li').removeClass('active');
-  $(this).addClass('active');
+$('.tabs-nav li').click(function(e){
+  e.preventDefault();
+  $('.tabs-nav li').removeClass('active-bottom');
+  $('.tabs-nav li a').removeClass('active');
+  $(this).addClass('active-bottom');
+  $(this).find('a').addClass('active');
   $('.tab-content').hide();
   
-  var activeTab = $(this).find('a').attr('href');
+  let activeTab = $(this).find('a').attr('href');
   $(activeTab).fadeIn();
+
+  if (activeTab == '#tab1') {
+    $('.course-class').children().hide();
+    $('.course-class').children('.first').show();
+  } else if (activeTab == '#tab2') {
+    $('.course-class').children().hide();
+    $('.course-class').children('.second').show();
+  } else if (activeTab == '#tab3') {
+    $('.course-class').children().hide();
+    $('.course-class').children('.third').show();
+  } else if (activeTab == '#tab4') {
+    $('.course-class').children().hide();
+    $('.course-class').children('.fourth').show();
+  } else if (activeTab == '#tab5') {
+    $('.course-class').children().hide();
+    $('.course-class').children('.fifth').show();
+  } else if (activeTab == '#tab6') {
+    $('.course-class').children().hide();
+    $('.course-class').children('.sixth').show();
+  }
+
   return false;
 });
+
+// hover function
+// $('.tabs-nav li').hover(function(){
+//     $(this).toggleClass('active-bottom')
+// })
