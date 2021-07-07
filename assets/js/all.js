@@ -1,70 +1,63 @@
+"use strict";
+
 // swiper 設定
-var swiper = new Swiper(".mySwiper", {    
-});
+var swiper = new Swiper(".mySwiper", {});
 var swiper_left = new Swiper(".mySwiper-left", {
-    spaceBetween: 20,
-    slidesPerView: "auto",
-    loop: true,
+  spaceBetween: 20,
+  slidesPerView: "auto",
+  loop: true
 });
 var swiper_right = new Swiper(".mySwiper-right", {
-    spaceBetween: 20,
-    slidesPerView: "auto",
-    loop: true,
+  spaceBetween: 20,
+  slidesPerView: "auto",
+  loop: true
 });
 var swiper_right = new Swiper(".mySwiper-video", {
-    spaceBetween: 20,
-    slidesPerView: "auto",
-    loop: true,
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    pagination: {
-        el: ".swiper-pagination",
-    },
+  spaceBetween: 20,
+  slidesPerView: "auto",
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  },
+  pagination: {
+    el: ".swiper-pagination"
+  }
+}); // 載入 wow.js
+
+new WOW().init(); // 右邊 sidebar 切換
+
+$('.dropdown-toggle').click(function (e) {
+  e.preventDefault();
+  $('.header .fixed-right .icon').slideToggle();
 });
-
-// 載入 wow.js
-new WOW().init();
-
-// 右邊 sidebar 切換
-$('.dropdown-toggle').click(function(e){
-    e.preventDefault();
-    $('.header .fixed-right .icon').slideToggle()
-})
-
-$('.fixed-black-box').hover(function(){
-    $('.fixed-black-box').hide();
-    $('.fixed-black .menu').show();
-})
-
-$('.fixed-black .menu').mouseleave(function(){
-    $('.fixed-black-box').show();
-    $('.fixed-black .menu').hide();
-})
-
-$('.fixed-black .menu').hide();
-
-// 分頁功能
+$('.fixed-black-box').hover(function () {
+  $('.fixed-black-box').hide();
+  $('.fixed-black .menu').show();
+});
+$('.fixed-black .menu').mouseleave(function () {
+  $('.fixed-black-box').show();
+  $('.fixed-black .menu').hide();
+});
+$('.fixed-black .menu').hide(); // 分頁功能
 // 注意 .active 與 .active-bottom 為了覆蓋樣式有加上 !importnat
 // 這裡是預設載入所有樣式
+
 $('.tabs-nav li:first-child').find('a').addClass('active');
 $('.tab-content').hide();
 $('.tab-content:first').show();
 $('.course-class').children().hide();
 $('.course-class').children('.first').show();
-$('.tabs-nav li:first-child').addClass('active-bottom');
+$('.tabs-nav li:first-child').addClass('active-bottom'); // Click function
 
-// Click function
-$('.tabs-nav li').click(function(e){
+$('.tabs-nav li').click(function (e) {
   e.preventDefault();
   $('.tabs-nav li').removeClass('active-bottom');
   $('.tabs-nav li a').removeClass('active');
   $(this).addClass('active-bottom');
   $(this).find('a').addClass('active');
   $('.tab-content').hide();
-  
-  let activeTab = $(this).find('a').attr('href');
+  var activeTab = $(this).find('a').attr('href');
   $(activeTab).fadeIn();
 
   if (activeTab == '#tab1') {
@@ -88,9 +81,8 @@ $('.tabs-nav li').click(function(e){
   }
 
   return false;
-});
-
-// hover function
+}); // hover function
 // $('.tabs-nav li').hover(function(){
 //     $(this).toggleClass('active-bottom')
 // })
+//# sourceMappingURL=all.js.map
