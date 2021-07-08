@@ -81,8 +81,19 @@ $('.tabs-nav li').click(function (e) {
   }
 
   return false;
-}); // hover function
-// $('.tabs-nav li').hover(function(){
-//     $(this).toggleClass('active-bottom')
-// })
+}); // 選單
+
+$('[menu]').hide();
+$('[open-menu]').click(function () {
+  var el = $("[menu=".concat($(this).attr('open-menu'), "]"));
+
+  if (el.is(":visible")) {
+    el.hide();
+  } else {
+    $("[menu][level]").filter(function () {
+      return $(this).attr("level") >= el.attr('level');
+    }).hide();
+    el.show();
+  }
+});
 //# sourceMappingURL=all.js.map
