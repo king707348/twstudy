@@ -63,7 +63,7 @@ $('.tabs-nav li').click(function(e){
   $(this).addClass('active-bottom');
   $(this).find('a').addClass('active');
   $('.tab-content').hide();
-  
+
   let activeTab = $(this).find('a').attr('href');
   $(activeTab).fadeIn();
 
@@ -90,6 +90,19 @@ $('.tabs-nav li').click(function(e){
   return false;
 });
 
+// 選單
+$('[menu]').hide();
+$('[open-menu]').click(function(){
+  const el = $(`[menu=${$(this).attr('open-menu')}]`)
+  if(el.is(":visible")) {
+    el.hide()
+  } else {
+    $("[menu][level]").filter(function() {
+      return $(this).attr("level") >= el.attr('level');
+    }).hide();
+    el.show()
+  }
+});
 // hover function
 // $('.tabs-nav li').hover(function(){
 //     $(this).toggleClass('active-bottom')

@@ -44,8 +44,8 @@
         </div>
         <div class="menu">
             <ul>
-                <li><a href="./class.html"><img src="./assets/images/210628-update/pc/menu_1.svg" alt=""></a></li>
-                <li><a href="#"><img src="./assets/images/210628-update/pc/menu_2.svg" alt=""></a></li>
+                <li open-menu="course"><a href="#"><img src="./assets/images/210628-update/pc/menu_1.svg" alt=""></a></li>
+                <li open-menu="main"><a href="#"><img src="./assets/images/210628-update/pc/menu_2.svg" alt=""></a></li>
             </ul>
         </div>
     </div>
@@ -75,6 +75,72 @@
 </header>
 
 <%- contents %>
+
+<div menu="main" level="0">
+    <ul>
+        <li><a href="#">常見問題</a></li>
+        <li><a href="#">獎學金申請</a></li>
+        <li open-menu="main2"><a href="#">榜單見證</a></li>
+        <li><a href="#">考試攻略</a></li>
+        <li><a href="#">相關免費服務</a></li>
+        <li><a href="#">限時優惠/精選活動</a></li>
+        <li><a href="#">關於我們</a></li>
+    </ul>
+    <ul menu="main2">
+        <li><a href="#">免費題庫</a></li>
+        <li><a href="#">免費課程</a></li>
+        <li><a href="#">過去live課程直播</a></li>
+        <li><a href="#">考古題練習網</a></li>
+        <li><a href="#">夥伴網</a></li>
+        <li><a href="#">落點分析服務</a></li>
+        <li><a href="#">學測5採4查詢</a></li>
+        <li><a href="#">國家考試日程</a></li>
+    </ul>
+</div>
+
+<div menu="course" level="0">
+    <ul>
+        <li><a href="#">升學課程</a></li>
+        <li><a href="#">教職課程</a></li>
+        <li><a href="#">公職課程</a></li>
+        <li open-menu="course-b"><a href="#">就業課程</a></li>
+        <% for(var i=0; i < 10; i++) { %>
+        <li><a href="#"><%= i %>課程</a></li>
+        <% } %>
+        <li open-menu="course-b1"><a href="#">ddd課程</a></li>
+        <li><a href="#">xx課程</a></li>
+    </ul>
+    <ul menu="course-b" level="2">
+        <li><a href="#">bbbb課程</a></li>
+        <li open-menu="course-c"><a href="#">bbbb課程</a></li>
+        <li><a href="#">bbbb課程</a></li>
+        <li><a href="#">bbbb課程</a></li>
+        <li><a href="#">bbbb課程</a></li>
+        <li open-menu="course-d"><a href="#">ddd課程</a></li>
+        <li><a href="#">bbbb課程</a></li>
+        <li><a href="#">bbbb課程</a></li>
+        <li><a href="#">bbbb課程</a></li>
+        <li><a href="#">bbbb課程</a></li>
+        <li><a href="#">bbbb課程</a></li>
+    </ul>
+    <ul menu="course-b1" level="2">
+        <li open-menu="course-c"><a href="#">bbbb1課程</a></li>
+        <li open-menu="course-d"><a href="#">ddd課程</a></li>
+        <% for(var i=0; i < 10; i++) { %>
+        <li><a href="#">b1b1b1 <%= i %>課程</a></li>
+        <% } %>
+    </ul>
+    <ul menu="course-c" level="3">
+        <% for(var i=0; i < 20; i++) { %>
+        <li><a href="#">ccc <%= i %>課程</a></li>
+        <% } %>
+    </ul>
+    <ul menu="course-d" level="3">
+        <% for(var i=0; i < 20; i++) { %>
+            <li><a href="#">ddd <%= i %>課程</a></li>
+            <% } %>
+    </ul>
+</div>
 
 <footer class="footer-container">
     <div class="footer wow fadeInUp">
