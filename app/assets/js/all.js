@@ -56,8 +56,22 @@ $('.tabs-nav li').click(function(){
   $('.tabs-nav li').removeClass('active');
   $(this).addClass('active');
   $('.tab-content').hide();
-  
+
   var activeTab = $(this).find('a').attr('href');
   $(activeTab).fadeIn();
   return false;
+});
+
+// 選單
+$('[menu]').hide();
+$('[open-menu]').click(function(){
+  const el = $(`[menu=${$(this).attr('open-menu')}]`)
+  if(el.is(":visible")) {
+    el.hide()
+  } else {
+    $("[menu][level]").filter(function() {
+      return $(this).attr("level") >= el.attr('level');
+    }).hide();
+    el.show()
+  }
 });
