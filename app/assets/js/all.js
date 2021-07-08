@@ -103,7 +103,3 @@ $('[open-menu]').click(function(){
     el.show()
   }
 });
-// hover function
-// $('.tabs-nav li').hover(function(){
-//     $(this).toggleClass('active-bottom')
-// })
