@@ -92,18 +92,32 @@ $('.tabs-nav li').click(function(e){
 
 // 選單
 $('[menu]').hide();
-$('[open-menu]').click(function(){
-  const el = $(`[menu=${$(this).attr('open-menu')}]`)
-  if(el.is(":visible")) {
-    el.hide()
+$('[open-menu], [menu] li').mouseenter(function () {
+  const parentMenu = $(this).closest('[menu]')
+  const parent = parentMenu.attr('menu') && $(`[open-menu=${parentMenu.attr('menu')}].active`)
+
+  $(this).siblings('.active').removeClass('active')
+  $(this).addClass('active')
+  if ($(this).attr('open-menu')) {
+    const el = $(`[menu=${$(this).attr('open-menu')}]`)
+    if (el) {
+      $("[menu][level]").filter(function () {
+        return $(this).attr("level") >= el.attr('level');
+      }).hide();
+      el.show();
+      $(`[menu=${$(this).attr('open-menu')}] .active`).removeClass('active');
+    }
+  } else if (parent) {
+    const level = parentMenu.attr('level')
+    if (level) {
+      $("[menu][level]").filter(function () {
+        return $(this).attr("level") > level;
+      }).hide().removeClass('active');
+    }
   } else {
-    $("[menu][level]").filter(function() {
-      return $(this).attr("level") >= el.attr('level');
-    }).hide();
-    el.show()
+    const level = $(this).attr('level') || 0
+    $("[menu][level]").filter(function () {
+      return $(this).attr("level") > level;
+    }).hide().removeClass('active');
   }
 });
-// hover function
-// $('.tabs-nav li').hover(function(){
-//     $(this).toggleClass('active-bottom')
-// })
