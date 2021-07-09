@@ -1,5 +1,10 @@
 // swiper 設定
-var swiper = new Swiper(".mySwiper", {    
+var swiper = new Swiper(".mySwiper", {   
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  }, 
+  grabCursor: true,
 });
 var swiper_left = new Swiper(".mySwiper-left", {
     spaceBetween: 20,

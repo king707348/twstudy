@@ -127,7 +127,7 @@
     .fixed-right {
         position: fixed;
         right: 2%;
-        top: 12%;
+        top: 12vh;
         z-index: 2;
         img {
             width: 50px;
@@ -154,7 +154,7 @@
             background-color: black;
             position: fixed;
             right: 0;
-            top: 12%;
+            top: 12vh;
         }
         ul {
             z-index: 2;
@@ -167,6 +167,9 @@
                 img {
                     width: 105px;
                     display: block;
+                }
+                &:hover {
+                    transform:scale(1.2,1.2);
                 }
             }
         }
