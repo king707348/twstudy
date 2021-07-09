@@ -5,7 +5,8 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css);
 body {
   font-family: '微軟正黑體';
-  line-height: 1.5; }
+  line-height: 1.5;
+  height: 100%; }
 
 .container {
   max-width: 1600px;
@@ -208,7 +209,7 @@ body {
   .header .fixed-right {
     position: fixed;
     right: 2%;
-    top: 12%;
+    top: 12vh;
     z-index: 2; }
     .header .fixed-right img {
       width: 50px;
@@ -229,7 +230,7 @@ body {
     background-color: black;
     position: fixed;
     right: 0;
-    top: 12%; }
+    top: 12vh; }
   .header .fixed-black ul {
     z-index: 2;
     display: -webkit-box;
@@ -245,6 +246,10 @@ body {
     .header .fixed-black ul li img {
       width: 105px;
       display: block; }
+    .header .fixed-black ul li:hover {
+      -webkit-transform: scale(1.2, 1.2);
+          -ms-transform: scale(1.2, 1.2);
+              transform: scale(1.2, 1.2); }
 
 .mySwiper img {
   width: 100%;
@@ -259,10 +264,10 @@ body {
   z-index: 999; }
   [menu=main] ul {
     float: right;
-    width: 200px;
+    width: 210px;
     max-height: 100%;
     overflow-y: auto;
-    border: 1px solid #696969; }
+    border: 1px solid transparent; }
     [menu=main] ul li {
       width: 100%;
       height: 50px;
@@ -276,9 +281,9 @@ body {
         position: absolute;
         left: 20px;
         line-height: 50px; }
-      [menu=main] ul li:hover {
+      [menu=main] ul li.active, [menu=main] ul li:hover {
         background-color: #0D5BAF; }
-        [menu=main] ul li:hover a {
+        [menu=main] ul li.active a, [menu=main] ul li:hover a {
           color: white; }
       [menu=main] ul li a {
         text-decoration: none;
@@ -290,13 +295,14 @@ body {
   height: calc(100% - 105px);
   position: fixed;
   top: 105px;
+  right: 105px;
   z-index: 999; }
   [menu=course] ul {
     float: right;
-    width: 200px;
+    width: 210px;
     max-height: 100%;
     overflow-y: auto;
-    border: 1px solid #696969; }
+    border: 1px solid transparent; }
     [menu=course] ul li {
       width: 100%;
       height: 50px;
@@ -310,9 +316,9 @@ body {
         position: absolute;
         left: 20px;
         line-height: 50px; }
-      [menu=course] ul li:hover {
+      [menu=course] ul li.active, [menu=course] ul li:hover {
         background-color: #F8A22E; }
-        [menu=course] ul li:hover a {
+        [menu=course] ul li.active a, [menu=course] ul li:hover a {
           color: white; }
       [menu=course] ul li a {
         text-decoration: none;

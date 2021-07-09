@@ -1,7 +1,13 @@
 "use strict";
 
 // swiper 設定
-var swiper = new Swiper(".mySwiper", {});
+var swiper = new Swiper(".mySwiper", {
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false
+  },
+  grabCursor: true
+});
 var swiper_left = new Swiper(".mySwiper-left", {
   spaceBetween: 20,
   slidesPerView: "auto",
@@ -84,16 +90,36 @@ $('.tabs-nav li').click(function (e) {
 }); // 選單
 
 $('[menu]').hide();
-$('[open-menu]').click(function () {
-  var el = $("[menu=".concat($(this).attr('open-menu'), "]"));
+$('[open-menu], [menu] li').mouseenter(function () {
+  var parentMenu = $(this).closest('[menu]');
+  var parent = parentMenu.attr('menu') && $("[open-menu=".concat(parentMenu.attr('menu'), "].active"));
+  $(this).siblings('.active').removeClass('active');
+  $(this).addClass('active');
 
-  if (el.is(":visible")) {
-    el.hide();
+  if ($(this).attr('open-menu')) {
+    var el = $("[menu=".concat($(this).attr('open-menu'), "]"));
+
+    if (el) {
+      $("[menu][level]").filter(function () {
+        return $(this).attr("level") >= el.attr('level');
+      }).hide();
+      el.show();
+      $("[menu=".concat($(this).attr('open-menu'), "] .active")).removeClass('active');
+    }
+  } else if (parent) {
+    var level = parentMenu.attr('level');
+
+    if (level) {
+      $("[menu][level]").filter(function () {
+        return $(this).attr("level") > level;
+      }).hide().removeClass('active');
+    }
   } else {
+    var _level = $(this).attr('level') || 0;
+
     $("[menu][level]").filter(function () {
-      return $(this).attr("level") >= el.attr('level');
-    }).hide();
-    el.show();
+      return $(this).attr("level") > _level;
+    }).hide().removeClass('active');
   }
 });
 //# sourceMappingURL=all.js.map
