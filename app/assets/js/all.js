@@ -1,9 +1,9 @@
 "use strict";
 
 // swiper 設定
-<<<<<<< HEAD
+// <<<<<<< HEAD
 var swiper = new Swiper(".mySwiper", {});
-=======
+// =======
 var swiper = new Swiper(".mySwiper", {   
   autoplay: {
     delay: 3000,
@@ -11,7 +11,7 @@ var swiper = new Swiper(".mySwiper", {
   }, 
   grabCursor: true,
 });
->>>>>>> 02c3390d9b282ab0131c69c6d50c58546fd1e949
+// >>>>>>> 02c3390d9b282ab0131c69c6d50c58546fd1e949
 var swiper_left = new Swiper(".mySwiper-left", {
   spaceBetween: 20,
   slidesPerView: "auto",
@@ -47,12 +47,11 @@ var swiper_right = new Swiper(".mySwiper-video", {
 
 new WOW().init(); // 右邊 sidebar 切換
 
-$('.dropdown-toggle').click(function (e) {
+$('.dropdown-toggle').on('click',function (e) {
   e.preventDefault();
   $('.header .fixed-right .icon').slideToggle();
-  
-  $('.close-menu').toggle()
   $('.open').toggle()
+  $('.close-menu').toggle()
 });
 
 
@@ -126,12 +125,12 @@ $('.tabs-nav li').click(function (e) {
   $(this).addClass('active-bottom');
   $(this).find('a').addClass('active');
   $('.tab-content').hide();
-<<<<<<< HEAD
-  var activeTab = $(this).find('a').attr('href');
-=======
+// <<<<<<< HEAD
+  // var activeTab = $(this).find('a').attr('href');
+// =======
 
   let activeTab = $(this).find('a').attr('href');
->>>>>>> 02c3390d9b282ab0131c69c6d50c58546fd1e949
+// >>>>>>> 02c3390d9b282ab0131c69c6d50c58546fd1e949
   $(activeTab).fadeIn();
 
   if (activeTab == '#tab1') {
@@ -157,7 +156,7 @@ $('.tabs-nav li').click(function (e) {
   return false;
 });
 
-<<<<<<< HEAD
+// <<<<<<< HEAD
 
 
 // toggle
@@ -552,7 +551,7 @@ $('.search-close').on('click',function(){
 //# sourceMappingURL=all.js.map
 
 
-=======
+// =======
 // 選單
 $('[menu]').hide();
 $('[open-menu], [menu] li').mouseenter(function () {
@@ -584,4 +583,4 @@ $('[open-menu], [menu] li').mouseenter(function () {
     }).hide().removeClass('active');
   }
 });
->>>>>>> 02c3390d9b282ab0131c69c6d50c58546fd1e949
+// >>>>>>> 02c3390d9b282ab0131c69c6d50c58546fd1e949

@@ -1,104 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>行動學習網</title>
-  <link rel="stylesheet" href="./assets/style/all.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-</head>
-
-<body>
-<!-- header-->
-  <header class="header fixed-top">
-    <div class="left-header wow fadeInUp">
-        <h1>
-            <a href="./index.html" title="行動學習網">
-                <img class="pc" src="./assets/images/210628-update/pc/logo.svg" alt="行動學習網">
-                <img class="mobile" src="./assets/images/210628-update/ph/logo.svg" alt="行動學習網">
-            </a>
-        </h1>
-        <div class="contact">
-            <div class="contact-inner">
-                <img src="./assets/images/210628-update/pc/icon_phone.svg" alt="">
-                <span>免費諮詢專線</span>
-            </div>
-            <a href="tel:0800-223-003">
-                0800-223-003
-            </a>
-        </div>
-    </div>
-    <div class="right-header wow fadeInUp">
-        <div class="header-search">
-            <span style="padding-left: 15px;">現在有<span style="color: #fbb03b;">214</span>門課課程|</span><span style="color: #fbb03b;">2323265</span><span>位會員</span>
-            <label class="find">
-                <input placeholder="想找點什麼課程?">
-            </label>
-        </div>
-        <div class="icon">
-            <ul>
-                <!-- mobile -->
-                <li class="mobile mobile-search">
-                  <a href="javascript:;">
-                    <img src="./assets/images/2_Search/1_search/icon_search.png" alt="">
-                  </a>
-                </li>
-                <!-- pc -->
-                <li><a href="#"><img src="./assets/images/icon/member.svg" alt=""></a></li>
-                <li><a href="#"><img src="./assets/images/icon/cart.svg" alt=""></a></li>
-            </ul>
-        </div>
-        <div class="menu">
-            <!-- pc -->
-            <ul class="menu-cont pc">
-                <li><a href="./class.html"><img src="./assets/images/210628-update/pc/menu_1.svg" alt=""></a></li>
-                <li><a href="#"><img src="./assets/images/210628-update/pc/menu_2.svg" alt=""></a></li>
-            </ul>
-            <!-- mobile -->
-            <ul class="menu-cont mobile">
-              <li>
-                <a href="javascript:;" class="schools-list">
-                  <img src="./assets/images/210628-update/ph/menu_1.svg" alt="">
-                </a>
-                
-              </li>
-              <li>
-                <a href="javascript:;" class="web-menu-list">
-                  <img src="./assets/images/210628-update/ph/menu_2.svg" alt="">
-                </a>
-              </li>
-            </ul>
-        </div>
-    </div>
-    <div class="fixed-right">
-        <ul class="fixed-right-menu">
-            <li class="pc"><a href="#"><img src="./assets/images/0_Plublic/2_sidemenu/1.gif" alt=""></a></li>
-            <li class="pc"><a href="#"><img src="./assets/images/0_Plublic/2_sidemenu/2.gif" alt=""></a></li>
-            <li class="dropdown-toggle">
-              <a href="#" class="open"><img src="./assets/images/0_Plublic/3_bottommenu/open.png" alt=""></a>
-              <a href="javascript:;" class="close-menu"><img src="./assets/images/0_Plublic/3_bottommenu/close.png" alt=""></a>
-            </li>
-            <ul class="icon">
-                <li><a href="#"><img src="./assets/images/0_Plublic/3_bottommenu/open.png"></a></li>
-                <li><a href="#"><img src="./assets/images/0_Plublic/3_bottommenu/line.png"></a></li>
-                <li><a href="#"><img src="./assets/images/0_Plublic/3_bottommenu/fb.png"></a></li>
-                <li><a href="#"><img src="./assets/images/0_Plublic/3_bottommenu/shareto.png"></a></li>
-            </ul>
-        </ul>
-    </div>
-    <div class="fixed-black">
-        <div class="fixed-black-box"></div>
-        <ul class="menu">
-            <li><a href="#"><img src="./assets/images/0_Plublic/2_sidemenu/gif3.gif"></a></li>
-            <li><a href="#"><img src="./assets/images/icon-right-header/2.svg"></a></li>
-            <li><a href="#"><img src="./assets/images/icon-right-header/3.svg"></a></li>
-            <li><a href="#"><img src="./assets/images/icon-right-header/4.svg"></a></li>
-            <li><a href="#"><img src="./assets/images/icon-right-header/5.svg"></a></li>
-        </ul>
-    </div>
-</header>
+---
+title: 課程頁面
+layout: ./app/layout.ejs
+engine: ejs
+current: class
+---
 
 <div class="main">
   <!-- Swiper -->
@@ -550,23 +455,6 @@
 
 
 </div>
-<footer class="footer-container">
-    <div class="footer wow fadeInUp">
-        <h2>-免費諮詢專線-</h2>
-        <small>課程 ｜ 考試 ｜ 客服</small>
-            <div class="box">
-                <i class="fas fa-phone-alt"></i>
-                <a href="javascript:;">0800-223-003</a>
-            </div>
-        <p>週間：09:00~21:00/假日：11:00~20:00</p>
-    </div>
-    <div class="copyRight">
-        <ul>
-            <li><img src="./assets/images/210628-update/pc/logo.svg"></li>
-            <li><span>行動學習科技股份有限公司 © Mobile Learning Co., Ltd.</span></li>
-        </ul>
-    </div>
-</footer>
 
 <!-- model -->
 <div class="model school-model">
