@@ -92,7 +92,7 @@ $(window).on('scroll',()=>{
     })
   }
 })
-if($(window).innerWidth() < 769){
+if($(window).innerWidth() < 1025){
   $('.left-list').removeClass('wow fadeInUp')
   $('.right-list').removeClass('wow fadeInUp')
   // hero
