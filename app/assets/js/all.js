@@ -13,15 +13,15 @@ var swiper = new Swiper(".mySwiper", {
 });
 // >>>>>>> 02c3390d9b282ab0131c69c6d50c58546fd1e949
 var swiper_left = new Swiper(".mySwiper-left", {
-  spaceBetween: 20,
-  slidesPerView: "auto",
+  spaceBetween: 10,
+  slidesPerView: 1,
   loop: true,
   breakpoints: {
-    320: {
+    426: {
       slidesPerView: 2,
       spaceBetween: 20,
     },
-    1024: {
+    768: {
       slidesPerView: 2,
       spaceBetween: 20,
     }
@@ -29,12 +29,22 @@ var swiper_left = new Swiper(".mySwiper-left", {
 });
 var swiper_right = new Swiper(".mySwiper-right", {
   spaceBetween: 20,
-  slidesPerView: "auto",
-  loop: true
+  slidesPerView: 1,
+  loop: true,
+  breakpoints: {
+    426: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    }
+  }
 });
 var swiper_right = new Swiper(".mySwiper-video", {
-  spaceBetween: 20,
-  slidesPerView: "auto",
+  slidesPerView: 1,
+  spaceBetween: 10,
   loop: true,
   navigation: {
     nextEl: ".swiper-button-next",
@@ -42,6 +52,16 @@ var swiper_right = new Swiper(".mySwiper-video", {
   },
   pagination: {
     el: ".swiper-pagination"
+  },
+  breakpoints: {
+    426: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    }
   }
 }); // 載入 wow.js
 
@@ -56,7 +76,27 @@ $('.dropdown-toggle').on('click',function (e) {
 
 
 $(window).on('scroll',()=>{
-  if($(window).innerWidth() >= 769){
+  if($(window).innerWidth() >= 1025){
+    // hero
+    $('.hero-box .left-list').show()
+    $('.hero-box .right-list').show()
+  }else if($(window).innerWidth() < 1025){
+  // hero
+  $('.li-stu h2').on('click',function(){
+    $('.hero-box .left-list').show()
+    $('.hero-box .right-list').hide()
+    $('.li-news h2').addClass('unfocus')
+    $(this).removeClass('unfocus')
+  })
+  $('.li-news h2').on('click',function(){
+    $('.hero-box .left-list').hide()
+    $('.hero-box .right-list').show()
+    $('.li-stu h2').addClass('unfocus')
+    $(this).removeClass('unfocus')
+  })
+  }
+
+  if($(window).innerWidth() >= 601){
     $('.fixed-black-box').show();
     $('.fixed-black .menu').hide();
     $('.read-more').show()
@@ -69,27 +109,11 @@ $(window).on('scroll',()=>{
       $('.fixed-black-box').show();
       $('.fixed-black .menu').hide();
     });
-    // hero
-    $('.hero-box .left-list').show()
-    $('.hero-box .right-list').show()
-  }else if($(window).innerWidth() < 769){
+
+  }else if($(window).innerWidth() < 601){
     $('.fixed-black-box').hide();
-    $('.fixed-black .menu').show();
     $('.right-list').removeClass('wow fadeInUp')
     $('.read-more').hide()
-    // hero
-    $('.li-stu h2').on('click',function(){
-      $('.hero-box .left-list').show()
-      $('.hero-box .right-list').hide()
-      $('.li-news h2').addClass('unfocus')
-      $(this).removeClass('unfocus')
-    })
-    $('.li-news h2').on('click',function(){
-      $('.hero-box .left-list').hide()
-      $('.hero-box .right-list').show()
-      $('.li-stu h2').addClass('unfocus')
-      $(this).removeClass('unfocus')
-    })
   }
 })
 if($(window).innerWidth() < 1025){
