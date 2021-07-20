@@ -5,21 +5,28 @@
 var swiper = new Swiper(".mySwiper", {});
 // =======
 var swiper = new Swiper(".mySwiper", {   
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
   autoplay: {
     delay: 3000,
     disableOnInteraction: false,
-  }, 
-  grabCursor: true,
+  },
 });
 // >>>>>>> 02c3390d9b282ab0131c69c6d50c58546fd1e949
 var swiper_left = new Swiper(".mySwiper-left", {
-  spaceBetween: 10,
   slidesPerView: 1,
+  spaceBetween: 10, 
   loop: true,
   breakpoints: {
-    426: {
+    360: {
       slidesPerView: 2,
-      spaceBetween: 20,
+      spaceBetween: 10,
+    },
+    425: {
+      slidesPerView: 2,
+      spaceBetween: 10,
     },
     768: {
       slidesPerView: 2,
@@ -32,9 +39,13 @@ var swiper_right = new Swiper(".mySwiper-right", {
   slidesPerView: 1,
   loop: true,
   breakpoints: {
-    426: {
+    360: {
       slidesPerView: 2,
-      spaceBetween: 20,
+      spaceBetween: 10,
+    },
+    425: {
+      slidesPerView: 2,
+      spaceBetween: 10,
     },
     768: {
       slidesPerView: 2,
@@ -96,7 +107,7 @@ $(window).on('scroll',()=>{
   })
   }
 
-  if($(window).innerWidth() >= 601){
+  if($(window).innerWidth() >= 769){
     $('.fixed-black-box').show();
     $('.fixed-black .menu').hide();
     $('.read-more').show()
@@ -110,7 +121,7 @@ $(window).on('scroll',()=>{
       $('.fixed-black .menu').hide();
     });
 
-  }else if($(window).innerWidth() < 601){
+  }else if($(window).innerWidth() < 769){
     $('.fixed-black-box').hide();
     $('.right-list').removeClass('wow fadeInUp')
     $('.read-more').hide()
@@ -513,7 +524,6 @@ $('.eng-learn').on('click',function(){
   $('.eng-learn-u3').toggle()
   $('.eng-learn img').toggleClass('deg')
 })
-
 // 網站選單
 $('.web-menu-list').on('click',function(){
   $('.web-menu').show()
@@ -521,7 +531,6 @@ $('.web-menu-list').on('click',function(){
 $('.web-menu .top-head a').on('click',function(){
   $('.web-menu').hide()
 })
-
 // 常見問題
 $('.ques').on('click',function(){
   $('.ques-u2').toggle()
@@ -557,8 +566,6 @@ $('.about-us').on('click',function(){
   $('.about-us-u2').toggle()
   $('.about-us img').toggleClass('deg')
 })
-
-
 // 搜尋
 $('.mobile-search').on('click',function(){
   $('.search-bar').show()
@@ -566,8 +573,6 @@ $('.mobile-search').on('click',function(){
 $('.search-close').on('click',function(){
   $('.search-bar').hide()
 })
-
-
 // hover function
 // $('.tabs-nav li').hover(function(){
 //     $(this).toggleClass('active-bottom')
