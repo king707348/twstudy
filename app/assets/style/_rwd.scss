@@ -762,7 +762,8 @@ overflow-x: hidden; }
   .leaderBoard .mySwiper-left,.leaderBoard .mySwiper-right{
     height: 400px;
   }
-  .leaderBoard .mySwiper-left .tag{
+  .leaderBoard .mySwiper-left .tag,
+  .leaderBoard .mySwiper-right .tag{
     top: 57%;
   }
   .leaderBoard .mySwiper-left small,
