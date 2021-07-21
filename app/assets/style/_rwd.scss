@@ -462,6 +462,18 @@ overflow-x: hidden; }
     color: #fff;
     font-weight: 700; } 
 @media screen and (max-width: 1024px) {
+  .news,.hero{
+    margin-top: 3rem;
+  }
+  .course,.vendor{
+    margin: 3rem 0;
+  }
+  .news-button{
+    margin-bottom: 5rem;
+  }
+  .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+    bottom: 3rem;
+  }
   .header .left-header {
     margin: auto; }
   .header .left-header h1 {
@@ -472,7 +484,7 @@ overflow-x: hidden; }
   {
     display: none; }
     .header .fixed-right img{
-      width: 50px;
+      width: 60px;
     }
     .header .right-header .header-search {
       width: 40%;
@@ -487,6 +499,9 @@ overflow-x: hidden; }
     display: flex; }
     .header .left-header h1 a{
       padding-left: 5%;
+    }
+    .course ul{
+      padding: .1rem 0;
     }
     .search .select-out-box .select-box:first-child li{
       width: 50%;
@@ -551,7 +566,7 @@ overflow-x: hidden; }
     padding: 5px 15px; }
   .search .select-out-box .select-box {
     padding: .5rem;
-    width: 50%; }
+    width: 55%; }
   .history-out-box {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -608,10 +623,14 @@ overflow-x: hidden; }
     max-height: 200px; }
   .mobile-w,.news-box-inner .right-list .pic {
     width: 50%;
-    margin-right: 15px;
+    margin: 0 auto;
      }
      .news-box-inner .right-list-inner .content{
-      margin-right: 15px;
+      margin-left: 1.5rem;
+     }
+     .news-box-inner .right-list .pic{
+       margin-right: 0;
+       margin: auto;
      }
   /* video */
   .video .mySwiper-video .swiper-wrapper ul {
@@ -740,6 +759,16 @@ overflow-x: hidden; }
     max-width: 768px;
     width: 100%;
   }
+  .leaderBoard .mySwiper-left,.leaderBoard .mySwiper-right{
+    height: 400px;
+  }
+  .leaderBoard .mySwiper-left .tag{
+    top: 57%;
+  }
+  .leaderBoard .mySwiper-left small,
+  .leaderBoard .mySwiper-right small{
+    top: 65%;
+  }
   .mySwiper img{
     max-height: 768px;
     min-height: 350px;
@@ -753,7 +782,7 @@ overflow-x: hidden; }
   .header .fixed-black ul li img{
     max-width: 150px;
     width: 100%;
-    max-height: 100px;
+    // max-height: 100px;
   }
   .sub-title{
     font-size: 1.5rem;
@@ -789,6 +818,9 @@ overflow-x: hidden; }
     max-height: 768px;
     min-height: auto;
   }
+  .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+    bottom: 4rem;
+  }
   .header .fixed-right .dropdown-toggle{
     bottom: 15%;
   }
@@ -803,8 +835,22 @@ overflow-x: hidden; }
   .search .select-out-box .select-box{
     width: 80%;
   }
+  .search img.line,.course img.line,
+  .leaderBoard .leader-list img.line,
+  .news img.line,.video img.line,.hero img.line,.vendor img.line{
+    width: 80% !important;
+  }
+  .history-out-box{
+    width: 85%;
+    margin: auto;
+  }
   .mySwiper.swiper-container .swiper-pagination {
     display: none;
+  }
+  .search .select-out-box .select-box:last-child li{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
   }
 }
 @media screen and (max-width: 425px) {
@@ -816,6 +862,9 @@ overflow-x: hidden; }
     width: 110px;
     padding-right: 0;
     font-size: 1rem;
+  }
+  .hero{
+    margin-top: 0;
   }
   .search .select-out-box .select-box input {
     font-size: 14px; }
@@ -852,11 +901,10 @@ overflow-x: hidden; }
       width: 60%;
     }
     .header .fixed-right .dropdown-toggle{
-      bottom: 15%;
-      width: 40px;
+      bottom: 11%;
     }
     .header .fixed-right img{
-      width: 40px;
+      width: 50px;
     }
     .tabs-nav li{
       width: 33.33333333%;
@@ -894,9 +942,6 @@ overflow-x: hidden; }
     .video .mySwiper-video .right-list p{
       margin-bottom: .5rem;
     }
-    .video .mySwiper-video{
-      padding: 60px 0;
-    }
     .mySwiper img{
       max-height: 768px;
       min-height: 190px;
@@ -924,10 +969,11 @@ overflow-x: hidden; }
     .search .select-out-box .select-box h3{
       font-size: 1rem;
     }
-    .leaderBoard .mySwiper-right .tag{
+    .leaderBoard .mySwiper-right .tag,
+    .leaderBoard .mySwiper-left .tag{
       width: 40px;
       height: 40px;
-      top: 53%;
+      top: 60%;
       left: 4%;
     }
     .search .select-out-box .select-box li{
