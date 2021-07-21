@@ -5,10 +5,9 @@
 var swiper = new Swiper(".mySwiper", {});
 // =======
 var swiper = new Swiper(".mySwiper", {   
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
+  // pagination: {
+  //   el: ".swiper-pagination",
+  // },
   autoplay: {
     delay: 3000,
     disableOnInteraction: false,
@@ -17,39 +16,35 @@ var swiper = new Swiper(".mySwiper", {
 // >>>>>>> 02c3390d9b282ab0131c69c6d50c58546fd1e949
 var swiper_left = new Swiper(".mySwiper-left", {
   slidesPerView: 1,
-  spaceBetween: 10, 
+  spaceBetween: 20, 
   loop: true,
   breakpoints: {
-    360: {
-      slidesPerView: 2,
-      spaceBetween: 10,
+    320: {
+      slidesPerView: 1.25,
+      spaceBetween: 20,
+      centeredSlides:true,
     },
-    425: {
-      slidesPerView: 2,
-      spaceBetween: 10,
-    },
-    768: {
+    426: {
       slidesPerView: 2,
       spaceBetween: 20,
+      centeredSlides:false,
     }
   }
 });
 var swiper_right = new Swiper(".mySwiper-right", {
-  spaceBetween: 20,
   slidesPerView: 1,
+  spaceBetween: 20,
   loop: true,
   breakpoints: {
-    360: {
-      slidesPerView: 2,
-      spaceBetween: 10,
+    320: {
+      slidesPerView: 1.25,
+      spaceBetween: 20,
+      centeredSlides:true,
     },
-    425: {
-      slidesPerView: 2,
-      spaceBetween: 10,
-    },
-    768: {
+    426: {
       slidesPerView: 2,
       spaceBetween: 20,
+      centeredSlides:false,
     }
   }
 });
@@ -65,13 +60,15 @@ var swiper_right = new Swiper(".mySwiper-video", {
     el: ".swiper-pagination"
   },
   breakpoints: {
+    320: {
+      slidesPerView: 1.25,
+      spaceBetween: 20,
+      centeredSlides:true,
+    },
     426: {
       slidesPerView: 2,
       spaceBetween: 20,
-    },
-    768: {
-      slidesPerView: 2,
-      spaceBetween: 20,
+      centeredSlides:false,
     }
   }
 }); // 載入 wow.js
