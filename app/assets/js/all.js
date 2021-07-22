@@ -194,9 +194,31 @@ $('.tabs-nav li').click(function (e) {
 // toggle
 $('.schools-list').on('click',function(){
   $('.school-model').show()
+
 })
-$('.school-model .top-head a').on('click',function(){
+$('.school-model .top-head a').on('click',function(e){
   $('.school-model').hide()
+  // 
+  $('.sch-u2,.teacher-u2,.public-offices-u2,.get-job-u2,.license-u2,.lang-class-u2').hide()
+  $('.schools img,.teacher img,.public-offices img,.get-job img,.license img,.lang-class img').removeClass('deg')
+  // 
+  $('.ele-u3,ju-u3,.vac-u3,.high-u3,.col-trans-u3,.ins-u3,.nurse-u3,.academy-u3,.med-u3').hide()
+  $('.element img,.junior img,.vacational-schools img,.high-schools img,.college-transfer-test img,.institute img,.nursing img,.police-academy img,.medicine img').removeClass('deg')
+  // 
+  $('.quali-u3,.t-sel-u3,.educare-giver-u3,.educare-class-u3,.free-master-u3,.rector-u3,.edu-exam-u3,.sup-teacher-u3,.sub-knowledge-u3').hide()
+  $('.teacher-qualification img,.selection img,.educare-giver img,.educare-class img,.free-master img,.rector img,.edu-exam img,.sup-teacher img,.sub-knowledge img').removeClass('deg')
+  // 
+  $('.gaopu-u3,.one-test-u3,.special-places-test-u3,.special-test-u3,.update-u3,.skills-u3').hide()
+  $('.gaopu img,.one-test img,.special-places-test img,.special-test img,.update img,.skills img').removeClass('deg')
+  // 
+  $('.state-u3,.post-office-u3,.electric-u3,.oil-u3,.bank-u3,.water-u3,.farming-u3,.steel-u3,.water-con-u3,.dry-nurse-u3,.mrt-u3,.fit-u3,.drive-u3').hide()
+  $('.state img,.post-office img,.electric img,.oil img,.bank img,.water img,.farming img,.steel img,.water-con img,.dry-nurse img,.mrt img,.fit img,.drive img').removeClass('deg')
+  // 
+  $('.nurse-license-u3,.nutritionist-u3,.food-u3,.physiotherapy-u3,.high-test-u3,.tourist-guide-u3,.bookkeeper-u3,.scrivener-u3,.immovables-u3,.firefighting-u3,.society-u3,.consultation-u3,.doctor-u3-u3').hide()
+  $('.nurse-license img,.nutritionist img,.food img,.physiotherapy img,.high-test img,.tourist-guide img,.bookkeeper img,.scrivener img,.immovables img,.firefighting img,.society img,.consultation img,.doctor-u3 img').removeClass('deg')
+  // 
+  $('.eng-test-u3,.koa-test-u3,.japan-test-u3,.europen-test-u3,.southeast-asia-test-u3,.pro-test-u3,.eng-learn-u3').hide()
+  $('.eng-test img,.koa-test img,.japan-test img,.europen-test img,.southeast-asia-test img,.pro-test img,.eng-learn img').removeClass('deg')
 })
 
 // 升學課程
