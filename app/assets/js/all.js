@@ -553,9 +553,6 @@ $('.web-menu .top-head a').on('click',function(){
   // 
   $('.ques-u2,.apply-gold-u2,.witness-u2,.raiders-u2,.free-service-u2,.activity-u2,.about-us').hide()
   $('.ques img,.apply-gold img,.witness img,.raiders img,.free-service img,.activity img,.about-us img').removeClass('deg')
-  // 
-  // $('.apply-gold-u2,.apply-gold-u2,.witness-u2,.raiders-u2,.free-service-u2,.activity-u2,.about-us').hide()
-  // $('.apply-gold img,.apply-gold img,.witness img,.raiders img,.free-service img,.activity img,.about-us img').removeClass('deg')
 })
 // 常見問題
 $('.ques').on('click',function(){
