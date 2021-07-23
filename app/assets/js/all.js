@@ -543,12 +543,19 @@ $('.eng-learn').on('click',function(){
   $('.eng-learn-u3').toggle()
   $('.eng-learn img').toggleClass('deg')
 })
+
 // 網站選單
 $('.web-menu-list').on('click',function(){
   $('.web-menu').show()
 })
 $('.web-menu .top-head a').on('click',function(){
   $('.web-menu').hide()
+  // 
+  $('.ques-u2,.apply-gold-u2,.witness-u2,.raiders-u2,.free-service-u2,.activity-u2,.about-us').hide()
+  $('.ques img,.apply-gold img,.witness img,.raiders img,.free-service img,.activity img,.about-us img').removeClass('deg')
+  // 
+  // $('.apply-gold-u2,.apply-gold-u2,.witness-u2,.raiders-u2,.free-service-u2,.activity-u2,.about-us').hide()
+  // $('.apply-gold img,.apply-gold img,.witness img,.raiders img,.free-service img,.activity img,.about-us img').removeClass('deg')
 })
 // 常見問題
 $('.ques').on('click',function(){

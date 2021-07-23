@@ -273,6 +273,8 @@ min-width: 82px }
   .model ul li a, .web-menu ul li a{
     color: #000;
     text-decoration: none;
+    max-height: 24px;
+    margin: auto 0;
   }
 .model ul li:last-child, .web-menu ul li:last-child {
   border-bottom: none;
@@ -290,7 +292,8 @@ min-width: 82px }
   max-width: fit-content;
   color: #ccc; }
 .model .top-head a, .web-menu .top-head a {
-  margin: auto; }
+  margin: auto;
+  max-height: 24px; }
 .model .top-menu {
   background: #fcf4e5;
   height: inherit;
@@ -460,6 +463,7 @@ overflow-x: hidden; }
     display: -ms-flexbox;
     display: flex;
     padding: .5rem;
+    padding-left: 10%;
     background: #0071bd;
     color: #fff;
     font-weight: 700; } 
