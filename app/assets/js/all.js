@@ -71,7 +71,23 @@ var swiper_right = new Swiper(".mySwiper-video", {
       centeredSlides:false,
     }
   }
-}); // 載入 wow.js
+});
+var swiper_admittes = new Swiper(".mySwiper-admitted", {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  centeredSlides: true,
+  loop:true,
+});
+var swiper_thanksful = new Swiper(".mySwiper-thanksful", {
+  slidesPerView: 1,
+  loop:true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+
+// 載入 wow.js
 
 new WOW().init(); // 右邊 sidebar 切換
 
@@ -636,3 +652,39 @@ $('[open-menu], [menu] li').mouseenter(function () {
   }
 });
 // >>>>>>> 02c3390d9b282ab0131c69c6d50c58546fd1e949
+
+// 播放清單 顯示文字、影片
+let videoLists = document.querySelector('.video-lists')
+let videoPlay = document.querySelector('.video-play')
+let infoFrame = document.querySelector('.info iframe')
+let htmlContent,removeLi
+let videoList = [
+  {
+    'name':'考取教師檢定的3個重要關鍵，實習教師必看!',
+    'url':'https://www.youtube.com/embed/5JKhKwUFKYY'
+  },
+  {
+    'name':'«見證»當障礙不是障礙-吳紹彰學員通過教檢',
+    'url':'https://www.youtube.com/embed/1LwMfducecQ'
+  }
+]
+console.log(infoFrame.src)
+
+videoLists.addEventListener('click',function(e){
+  htmlContent = e.target.text
+  for(let i in videoList){
+    if(htmlContent === videoList[i].name){
+      infoFrame.src = videoList[i].url
+    }
+  }
+  if(htmlContent){
+    removeLi = e.target.parentNode.parentNode.children
+    for(let i = 0; i < removeLi.length; i++){
+      removeLi[i].children[0].classList.remove('orange')
+    }
+    e.target.classList.add('orange')
+    videoPlay.innerHTML= htmlContent
+    return htmlContent
+  }
+})
+
